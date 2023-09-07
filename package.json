@@ -1,0 +1,30 @@
+{
+  "name": "foodie",
+  "version": "1.0.0",
+  "description": "Create a restaurant website",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "practice",
+    "project"
+  ],
+  "author": "Sudip Paladhi",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "postcss": "^8.4.29",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0"
+  },
+  "browserslist": [
+    "last 2 version"
+  ]
+}
