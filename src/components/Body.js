@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import ShimmerUi from "./ShimmerUi";
 import RestaurantCard from "./RestaurantCard";
 import { Link } from "react-router-dom";
+import { useActivityStatus } from "../utils/useActivityStatus";
 
 const filterData = (searchText, allRestaurant) => {
   const filterData = allRestaurant.filter((restaurant) =>
@@ -31,28 +32,36 @@ const Body = () => {
   // if (allRestaurant.length === 0) {
   //   return (<shimmerUi />);
   // }
+const onlineStatus = useActivityStatus();
+if (onlineStatus === false) return(
+  <h1>you are offlene!! Pleace check your internet connection;</h1>
+)
+
   return (allRestaurant?.length === 0) ? (<ShimmerUi />) : (
     <>
-      <div>
-        <input type="text" value={searchText}
+    <div className="">
+      <div className=" pt-7 px-2 justify-center pl-2">
+        <input className=" p-2 px-16 border rounded border-black me-2" type="text" placeholder="Search by Restaurant name...." value={searchText}
           onChange={(e) => { setSearchText(e.target.value); }} />
 
-        <button onClick={() => {
+        <button className="p-2 bg-green-500 rounded text-white" onClick={() => {
           const data = filterData(searchText, allRestaurant);
           setFilteredData(data);
         }}
         >Click Here</button>
       </div>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center p-3 gap-3">
         {
           filteredData.map((restaurant) => {
             return (
-              <Link key={...restaurant?.info?.id} 
+              <Link key={restaurant?.info?.id} 
               to={"/restaurants/"+restaurant?.info?.id}> 
-              <RestaurantCard {...restaurant?.info} /> </Link>
+              <RestaurantCard {...restaurant?.info} /> 
+              </Link>
             )
           })
         }
+      </div>
       </div>
     </>
   )
