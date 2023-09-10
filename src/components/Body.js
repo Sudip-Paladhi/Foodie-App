@@ -23,11 +23,10 @@ const Body = () => {
   const getRestaurent = async () => {
     const data = await fetch(swiggy_api_URL);
     const json = await data.json();
-    // console.log(json);
     setAllRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setFilteredData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-
   }
+
   // conditional Rendering 
   // if (allRestaurant.length === 0) {
   //   return (<shimmerUi />);
@@ -51,10 +50,9 @@ if (onlineStatus === false) return(
         >Click Here</button>
       </div>
       <div className="flex flex-wrap justify-center p-3 gap-3">
-        {
-          filteredData.map((restaurant) => {
+        {filteredData.map((restaurant) => {
             return (
-              <Link key={restaurant?.info?.id} 
+              <Link key={...restaurant?.info?.id} 
               to={"/restaurants/"+restaurant?.info?.id}> 
               <RestaurantCard {...restaurant?.info} /> 
               </Link>

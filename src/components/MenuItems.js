@@ -1,6 +1,7 @@
 import { ITEM_IMG_CDN_URL } from "../utils/constants";
 
 const MenuItems = ({ name, imageId, price, description }) => {
+
   return (
     <div className=" flex justify-between py-4 px-48 p-14 border-b">
       <div className="">
