@@ -7,7 +7,7 @@ const RestaurantCard = ({
   cuisines,
   sla,
   avgRatingString,
-  costForTwo
+  costForTwo,
 }) => {
   return (
     <div className=" h-80 w-72 bg-slate-50 hover:border-gray-300 hover:shadow md:gap-1 cursor-pointer rounded transition-all border-gray-200 md:border-white border md:p-5">
@@ -17,7 +17,9 @@ const RestaurantCard = ({
         alt="image"
       />
       <h2 className="text-xl font-bold mt-1 pt-1">{name}</h2>
-      <p className="text-gray-800 text-sm pt-2">{cuisines && cuisines.join(", ")}</p>
+      <p className="text-gray-800 text-sm pt-2">
+        {cuisines && cuisines.join(", ")}
+      </p>
       <div className="flex justify-between text-sm mt-2 pt-2">
         <div
           className={`flex items-center gap-2 font-bold text-sm px-1 rounded w-fit ${
@@ -26,7 +28,7 @@ const RestaurantCard = ({
               : " bg-orange-200 text-red-600"
           }`}
         >
-        <FaStar />
+          <FaStar />
           <p>{avgRatingString}</p>
         </div>
         <span className="font-bold text-gray-700">
@@ -39,8 +41,5 @@ const RestaurantCard = ({
     </div>
   );
 };
-
-
-
 
 export default RestaurantCard;

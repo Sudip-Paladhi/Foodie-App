@@ -39,7 +39,7 @@ if (onlineStatus === false) return(
   return (allRestaurant?.length === 0) ? (<ShimmerUi />) : (
     <>
     <div className="">
-      <div className=" pt-7 px-2 justify-center pl-2">
+      <div className=" pt-7 px-2 justify-center pl-2 m-auto">
         <input className=" p-2 px-16 border rounded border-black me-2" type="text" placeholder="Search by Restaurant name...." value={searchText}
           onChange={(e) => { setSearchText(e.target.value); }} />
 
