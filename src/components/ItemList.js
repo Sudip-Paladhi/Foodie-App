@@ -6,17 +6,17 @@ const ItemList = ({ items }) => {
         <div key={item?.card?.info?.id} className="flex p-2 m-2 border-b-2">
           <div className="w-9/12 flex flex-col ">
             <span className="font-semibold">{item?.card?.info?.name}</span>
-            <span>
+            <span className="font-sem">
               Rs -{" "}
               {item?.card?.info?.price
                 ? item?.card?.info?.price / 100
                 : item?.card?.info?.defaultPrice / 100}
               /-
             </span>
-            <p className="text-gray-600">{item?.card?.info?.description}</p>
+            <p className="hidden text-gray-400">{item?.card?.info?.description}</p>
           </div>
-          <div className="w-3/12 p-4 h-36">
-            <div className="absolute trans">
+          <div className="w-3/12 pl-6 h-36">
+            <div className="absolute">
               <button className="p-2 m-2 bg-slate-900 text-white rounded shadow-lg translate-x-16 translate-y-20">
                 Add +
               </button>

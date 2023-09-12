@@ -10,7 +10,7 @@ const RestaurantCard = ({
   costForTwo,
 }) => {
   return (
-    <div className=" h-80 w-72 bg-slate-50 hover:border-gray-300 hover:shadow md:gap-1 cursor-pointer rounded transition-all border-gray-200 md:border-white border md:p-5">
+    <div className="h-80 w-72 bg-slate-50 hover:border-gray-400 hover:shadow md:gap-1 cursor-pointer rounded transition-all border-gray-200 md:border-white border md:p-5">
       <img
         className="rounded"
         src={IMG_CDN_URL + cloudinaryImageId}
