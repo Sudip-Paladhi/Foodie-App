@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import logo from "../Assets/foodie.png"
+import { FaShoppingCart } from "react-icons/fa";
+import { UseSelector, useSelector } from "react-redux/es/hooks/useSelector";
 const Header = () => {
+
+    //Subscribing to the store using a Selector. 
+    const cartItems = useSelector((store) => store.cart.items);
+    console.log(cartItems);
     return(
         <div className=" max-h-28 flex justify-between text-center shadow-lg ">
             <div>
@@ -18,7 +24,7 @@ const Header = () => {
                     <li className=" mx-4">
                     <Link to="/contact">Contact</Link>
                     </li>
-                    <li className=" mx-4">Cart</li>
+                    <li className=" mx-4 items-center w-fit py-1 flex "><FaShoppingCart />({cartItems.length} items)</li>
                 </ul>
             </div>
         </div>

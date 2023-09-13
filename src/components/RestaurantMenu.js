@@ -57,7 +57,7 @@ const RestaurantMenu = () => {
         </div>
       </div>
       <div>
-        {categories.map((category) => (
+        {categories?.map((category) => (
           <RestaurantCategory
             key={category?.card?.card?.title}
             data={category?.card?.card}
@@ -68,9 +68,4 @@ const RestaurantMenu = () => {
   );
 };
 
-// <ul>
-// {itemCards.map((item) => {
-//     return <MenuItems key={item?.card?.info?.id} {...item?.card?.info} />;
-//   })}
-// </ul>
 export default RestaurantMenu;

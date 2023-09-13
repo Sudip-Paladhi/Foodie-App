@@ -9,13 +9,17 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { Suspense } from "react";
 const About = lazy(() => import("./components/About"));
+import { Provider } from "react-redux";
+import appStore from "./Redux/AppStore";
 const AppLayout = () => {
   return (
+    <Provider store={appStore}>
     <>
       <Header />
       <Outlet />
       <Footer />
     </>
+    </Provider>
   );
 };
 

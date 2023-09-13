@@ -50,7 +50,7 @@ if (onlineStatus === false) return(
         >Click Here</button>
       </div>
       <div className="flex flex-wrap justify-center p-3 gap-3">
-        {filteredData.map((restaurant) => {
+        {filteredData?.map((restaurant) => {
             return (
               <Link key={...restaurant?.info?.id} 
               to={"/restaurants/"+restaurant?.info?.id}> 
