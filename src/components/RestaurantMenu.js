@@ -26,23 +26,25 @@ const RestaurantMenu = () => {
 
   return (
     <>
-      <div className="justify-between p-10 m-auto flex w-9/12 border-b">
-        <div className="flex">
+      <div className="p-1 justify-between md:p-10 md:m-auto flex md:w-9/12 border-b">
+        <div className="md:w-3/12">
           <img
-            className="h-32 rounded pr-12"
+            className="md:h-44 md:w-fit md:object-fill md:pr-12 rounded w-32 h-28 mt-5 ml-2 "
             src={IMG_CDN_URL + cloudinaryImageId}
             alt={name}
           />
-          <div>
-            <p className=" font-bold text-2xl">{name}</p>
-            <p className="text-gray-700">{cuisines?.join(", ")}</p>
-            <p className="text-gray-700">{costForTwoMessage}</p>
-          </div>
         </div>
 
-        <div className="border pt-10 rounded-xl px-3 items-center">
+        <div className="md:flex md:w-9/12 md:justify-between md:pt-4">
+        <div>
+        <p className=" font-bold text-2xl">{name}</p>
+        <p className="text-gray-400">{cuisines?.join(", ")}</p>
+        <p className="text-gray-400">{costForTwoMessage}</p>
+      </div>
+
+        <div className=" flex gap-1 md:border rounded-xl md:px-3 md:items-center h-20 md:pt-3">
           <div
-            className={`flex items-center gap-2 font-bold text-sm px-1 rounded w-fit 
+            className={`flex items-center md:gap-2 font-bold text-sm px-1 rounded w-fit 
         ${
           avgRatingString >= 4
             ? " bg-slate-200 text-green-600"
@@ -53,10 +55,11 @@ const RestaurantMenu = () => {
             <p>{avgRatingString}</p>
           </div>
 
-          <p className="pt-4">{totalRatingsString}</p>
+          <p className="pt-4 ">{totalRatingsString}</p>
+        </div>
         </div>
       </div>
-      <div>
+      <div className="w-11/12 m-auto">
         {categories?.map((category) => (
           <RestaurantCategory
             key={category?.card?.card?.title}

@@ -39,17 +39,17 @@ if (onlineStatus === false) return(
   return (allRestaurant?.length === 0) ? (<ShimmerUi />) : (
     <>
     <div className="">
-      <div className=" pt-7 px-2 justify-center pl-2 m-auto">
-        <input className=" p-2 px-16 border rounded border-black me-2" type="text" placeholder="Search by Restaurant name...." value={searchText}
+      <div className=" md:pt-7 md:px-2 justify-center md:pl-2 flex mt-4 gap-2">
+        <input className=" md:p-2 md:px-16 border rounded border-black md:me-2" type="text" placeholder="Search ..." value={searchText}
           onChange={(e) => { setSearchText(e.target.value); }} />
 
-        <button className="p-2 bg-green-500 rounded text-white" onClick={() => {
+        <button className="md:p-2 px-1 bg-green-600 rounded text-white" onClick={() => {
           const data = filterData(searchText, allRestaurant);
           setFilteredData(data);
         }}
         >Click Here</button>
       </div>
-      <div className="flex flex-wrap justify-center p-3 gap-3">
+      <div className="flex flex-wrap justify-center md:p-3 md:gap-3 p-2 mt-4 gap-3 m-auto">
         {filteredData?.map((restaurant) => {
             return (
               <Link key={...restaurant?.info?.id} 

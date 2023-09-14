@@ -11,6 +11,7 @@ import { Suspense } from "react";
 const About = lazy(() => import("./components/About"));
 import { Provider } from "react-redux";
 import appStore from "./Redux/AppStore";
+import Cart from "./components/Cart";
 const AppLayout = () => {
   return (
     <Provider store={appStore}>
@@ -43,9 +44,14 @@ const appRouter = createBrowserRouter([
       element: <Contact />,
     },
     {
+      path: "/cart",
+      element: <Cart />,
+    },
+    {
       path: "/restaurants/:resId",
       element: <RestaurantMenu />,
     },
+
 
   ]
 },
