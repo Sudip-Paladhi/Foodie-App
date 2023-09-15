@@ -10,12 +10,15 @@ const RestaurantCard = ({
   costForTwo,
 }) => {
   return (
-    <div className="md:h-80 md:w-72 gap-2 p-2 bg-slate-50 hover:border-gray-300 hover:shadow md:gap-1 cursor-pointer rounded transition-all border-gray-200 md:border-white border md:p-5">
-      <img
-        className="rounded p-2"
-        src={IMG_CDN_URL + cloudinaryImageId}
-        alt="image"
-      />
+    <div className="md:w-72 gap-2 p-2 hover:border-gray-300 hover:shadow md:gap-1 cursor-pointer rounded  border-gray-200 md:border-white border md:p-5">
+    <div className="h-full w-full object-cover">
+    <img
+    className="rounded "
+    src={IMG_CDN_URL + cloudinaryImageId}
+    alt="image"
+  />
+    </div>
+
       <h2 className="text-xl font-bold md:mt-1 md:pt-1 ml-2">{name}</h2>
       <p className="text-gray-800 text-sm ml-2">
         {cuisines && cuisines.join(", ")}
