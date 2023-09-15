@@ -49,7 +49,7 @@ if (onlineStatus === false) return(
         }}
         >Click Here</button>
       </div>
-      <div className="flex flex-wrap justify-center md:p-3 md:gap-3 p-2 mt-4 gap-3 m-auto">
+      <div className="flex flex-wrap justify-center gap-3 p-2 mt-1 ">
         {filteredData?.map((restaurant) => {
             return (
               <Link key={...restaurant?.info?.id} 
