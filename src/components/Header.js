@@ -26,7 +26,7 @@ const Header = () => {
           <li className="  hover:text-gree">
             <Link to="/cart" className="flex md:mx-4 items-center w-fit md:py-1">
               <FaShoppingCart />
-              <div>({cartItems.length}) </div>
+              <div>({cartItems.length})</div>
             </Link>
           </li>
         </ul>
