@@ -13,7 +13,7 @@ const Header = () => {
       </div>
 
       <div className="">
-        <ul className="flex justify-center gap-4 pr-1 md:mx-4 md:text-xl md:py-6 pt-3 text-gray-800 md:font-medium">
+        <ul className="flex justify-center gap-4 pr-1 md:mx-4 md:text-xl md:py-6 pt-5 text-gray-800 md:font-medium">
           <li className=" md:mx-4 hover:text-gree">
             <Link to="/">Home</Link>
           </li>
