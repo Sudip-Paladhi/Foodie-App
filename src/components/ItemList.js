@@ -1,12 +1,12 @@
 import { ITEM_IMG_CDN_URL } from "../utils/constants";
 import { useDispatch } from "react-redux";
-import { addItems } from "../Redux/cartSlice";
+import { addToCart } from "../Redux/cartSlice";
 
 const ItemList = ({ items }) => {
   const dispatch = useDispatch();
   const handleAddIteam = (item) => {
     // Dispatch an action
-    dispatch(addItems(item));
+    dispatch(addToCart(item));
   };
 
   return (
