@@ -10,7 +10,7 @@ const RestaurantCard = ({
   costForTwo,
 }) => {
   return (
-    <div className="md:w-72 md:p-4 p-1 mt-2 hover:border-gray-400 hover:shadow border-gray-200 md:border-white border rounded">
+    <div className="md:w-72 md:px-4 mt-2 rounded transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95 duration-200">
       <div className="h-full w-full object-cover">
         <img
           className="rounded "

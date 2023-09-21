@@ -42,7 +42,7 @@ const RestaurantMenu = () => {
             <p className="text-gray-400">{costForTwoMessage}</p>
           </div>
 
-          <div className=" flex md:flex-col gap-1 md:border rounded-xl md:px-3 md:items-center md:pt-3">
+          <div className=" flex md:flex-col md:h-20 gap-1 md:border rounded-xl md:px-3 md:items-center md:pt-3">
             <div
               className={`flex items-center md:gap-2 font-bold text-sm px-1 rounded w-fit 
         ${

@@ -19,7 +19,6 @@ const Cart = () => {
   const discount = (totalPrice * 0.2) / 100;
   const deliveryFee = (totalPrice * 0.04) / 100;
   const totalAmt = totalPrice / 100 + deliveryFee - discount;
-  console.log(cartItems);
 
   const removeItem = (id) => dispatch(removeFromCart({ id }));
   const decreaseQuantity = (id) => dispatch(decreaseItemQuantity({ id }));
@@ -35,7 +34,7 @@ const Cart = () => {
                 return (
                   <div
                     className="flex mb-5 items-center gap-2 md:gap-3"
-                    key={item.id}
+                    key={item?.item?.card?.ifno?.id}
                   >
                     <div className="w-[18%] ">
                       <img
@@ -61,7 +60,6 @@ const Cart = () => {
                       <div className="border-green-200 rounded shadow mx-auto text-xs md:text-base">
                         <button
                           className="text-lg px-2 hover:text-green-700 "
-                          // onClick={() => dispatch(descreaseCartItem(item))}
                           onClick={() =>
                             decreaseQuantity(item?.item?.card?.info?.id)
                           }
@@ -73,7 +71,6 @@ const Cart = () => {
                         </span>
                         <button
                           className="font-medium px-2 hover:text-green-700"
-                          // onClick={() => dispatch(addToCart(item))}
                           onClick={() =>
                             increaseQuantity(item?.item?.card?.info?.id)
                           }
@@ -133,10 +130,10 @@ const Cart = () => {
             </div>
 
             <button
-              className="w-full block mt-4 uppercase font-bold text-lg bg-green-600 text-white text-center p-4 rounded-md hover:shadow-md"
+              className="w-full block mt-4 uppercase font-bold text-lg bg-orange-500 text-white text-center p-4 rounded-md hover:shadow-md"
               onClick={() => alert("Order Successful 🤤😜")}
             >
-              To Pay
+              CHECKOUT
             </button>
 
             <div className="grid grid-cols-2 gap-3 mt-3">
@@ -154,7 +151,7 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className="mt-10 flex items-center justify-center flex-col gap-4">
+        <div className="py-10 flex items-center justify-center flex-col gap-4 container-max">
           <img
             src={"https://shidory.com/assets/images/empty_cart.webp"}
             className="md:w-[30%]"

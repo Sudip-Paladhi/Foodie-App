@@ -27,10 +27,6 @@ const Body = () => {
     setFilteredData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 
-  // conditional Rendering 
-  // if (allRestaurant.length === 0) {
-  //   return (<shimmerUi />);
-  // }
 const onlineStatus = useActivityStatus();
 if (onlineStatus === false) return(
   <h1>you are offlene!! Pleace check your internet connection;</h1>
@@ -39,11 +35,11 @@ if (onlineStatus === false) return(
   return (allRestaurant?.length === 0) ? (<ShimmerUi />) : (
     <>
     <div className="">
-      <div className=" md:pt-7 md:px-2 justify-center md:pl-2 flex mt-4 gap-2">
-        <input className=" md:p-2 md:px-16 border rounded border-black md:me-2" type="text" placeholder="Search ..." value={searchText}
+      <div className=" md:pt-4 md:px-2 justify-center md:pl-2 flex mt-2 gap-2">
+        <input className=" md:p-2 md:w-96 border rounded border-black md:me-2" type="text" placeholder="Search ..." value={searchText}
           onChange={(e) => { setSearchText(e.target.value); }} />
 
-        <button className="md:p-2 px-1 bg-green-600 rounded text-white" onClick={() => {
+        <button className="md:p-2 px-1 md:font-semibold bg-orange-500 rounded text-white" onClick={() => {
           const data = filterData(searchText, allRestaurant);
           setFilteredData(data);
         }}
