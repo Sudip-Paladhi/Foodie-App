@@ -36,7 +36,7 @@ if (onlineStatus === false) return(
     <>
     <div className="">
       <div className=" md:pt-4 md:px-2 justify-center md:pl-2 flex mt-2 gap-2">
-        <input className=" md:p-2 md:w-96 border rounded border-black md:me-2" type="text" placeholder="Search ..." value={searchText}
+        <input className=" md:p-2 md:w-96 w-40 border rounded border-black md:me-2" type="text" placeholder="Search ..." value={searchText}
           onChange={(e) => { setSearchText(e.target.value); }} />
 
         <button className="md:p-2 px-1 md:font-semibold bg-orange-500 rounded text-white" onClick={() => {

@@ -37,7 +37,9 @@ const RestaurantMenu = () => {
 
         <div className="py-2 pl-1 md:flex md:w-9/12 md:justify-between md:pt-4">
           <div>
-            <p className=" font-semibold text-l leading-5 md:font-bold md:text-2xl">{name}</p>
+            <p className=" font-semibold text-l leading-5 md:font-bold md:text-2xl">
+              {name}
+            </p>
             <p className="text-gray-400">{cuisines?.join(", ")}</p>
             <p className="text-gray-400">{costForTwoMessage}</p>
           </div>

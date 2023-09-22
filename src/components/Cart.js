@@ -48,7 +48,7 @@ const Cart = () => {
                       <p className="text-base md:mb-2">
                         {item?.item?.card?.info?.name}
                       </p>
-                      <div className="flex font-bold items-center mx-auto">
+                      <div className="flex text-gray-600 items-center mx-auto">
                         ₹{" "}
                         {item?.item?.card?.info?.price
                           ? item?.item?.card?.info?.price / 100
@@ -66,11 +66,11 @@ const Cart = () => {
                         >
                           -
                         </button>
-                        <span className="px-1 md:px-2 font-medium">
+                        <span className="px-1 md:px-2 font-medium text-green-700">
                           {item.quantity}
                         </span>
                         <button
-                          className="font-medium px-2 hover:text-green-700"
+                          className="font-medium px-2 text-green-700"
                           onClick={() =>
                             increaseQuantity(item?.item?.card?.info?.id)
                           }
@@ -81,7 +81,7 @@ const Cart = () => {
 
                       <div
                         onClick={() => removeItem(item?.item?.card?.info?.id)}
-                        className="hidden md:flex transition-all hover:text-red-600 cursor-pointer p-2 rounded my-auto"
+                        className="hidden text-sm md:flex transition-all hover:text-red-600 cursor-pointer p-2 rounded my-auto"
                       >
                         <FaXmark />
                       </div>
@@ -99,21 +99,21 @@ const Cart = () => {
               })}
           </div>
 
-          <div className="basis-5/12 h-fit bg-slate-50 sticky top-40 p-6 rounded-md border shadow-md my-8 md:m-0">
-            <h2 className="text-xl font-bold border-b pb-4">Place Order</h2>
+          <div className="basis-4/12 h-fit sticky top-28 p-6 rounded-md border shadow-2xl my-8 md:m-0">
+            <h2 className="text-xl border-b pb-4">Bill Details</h2>
 
             {/* order details */}
-            <div className="py-4 text-lg space-y-4 border-b">
-              <div className="flex justify-between items-center font-semibold">
+            <div className="py-4 space-y-4 border-b">
+              <div className="flex justify-between items-center">
                 <p className="font-normal">Price ({cartItems.length} items)</p>
                 <p>₹ {totalPrice / 100}</p>
               </div>
-              <div className="flex justify-between items-center font-semibold">
+              <div className="flex justify-between items-center">
                 <p className="font-normal">Discount (20%)</p>
                 <p> - ₹ {parseFloat(discount).toFixed(0)}</p>
               </div>
-              <div className="flex justify-between items-center font-semibold">
-                <p className="font-normal">Delivery Fee(4%)</p>
+              <div className="flex justify-between items-center">
+                <p className="font-normal">Delivery Fee (4%)</p>
                 <p>+ ₹ {parseFloat(deliveryFee).toFixed(0)}</p>
               </div>
 
@@ -123,17 +123,17 @@ const Cart = () => {
             </div>
 
             <div className="py-4 border-b">
-              <div className="md:flex justify-between items-center font-bold text-lg md:text-2xl">
+              <div className="flex justify-between items-center">
                 <h1>Total Amount</h1>
                 <h1 className="">₹ {parseFloat(totalAmt).toFixed(0)}</h1>
               </div>
             </div>
 
             <button
-              className="w-full block mt-4 uppercase font-bold text-lg bg-orange-500 text-white text-center p-4 rounded-md hover:shadow-md"
+              className="w-full block mt-4 text-lg bg-green-100 text-black hover:text-white hover:bg-green-600 text-center p-4 rounded-md hover:shadow-md"
               onClick={() => alert("Order Successful 🤤😜")}
             >
-              CHECKOUT
+              Checkout
             </button>
 
             <div className="grid grid-cols-2 gap-3 mt-3">
@@ -151,7 +151,7 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className="py-10 flex items-center justify-center flex-col gap-4 container-max">
+        <div className=" py-10 flex items-center justify-center flex-col gap-4 container-max">
           <img
             src={"https://shidory.com/assets/images/empty_cart.webp"}
             className="md:w-[30%]"

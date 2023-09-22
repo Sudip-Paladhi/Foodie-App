@@ -10,7 +10,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import { Suspense } from "react";
 const About = lazy(() => import("./components/About"));
 import { Provider } from "react-redux";
-import appStore from "./Redux/AppStore";
+import appStore from "./Redux/appStore";
 import Cart from "./components/Cart";
 const AppLayout = () => {
   return (
