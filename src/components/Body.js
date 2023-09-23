@@ -23,8 +23,8 @@ const Body = () => {
   const getRestaurent = async () => {
     const data = await fetch(swiggy_api_URL);
     const json = await data.json();
-    setAllRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setFilteredData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setAllRestaurant(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilteredData(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 
 const onlineStatus = useActivityStatus();
