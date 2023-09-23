@@ -23,8 +23,15 @@ const Body = () => {
   const getRestaurent = async () => {
     const data = await fetch(swiggy_api_URL);
     const json = await data.json();
-    setAllRestaurant(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setFilteredData(json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    json?.data?.cards?.map((item)=> {
+      if(item?.card?.card?.id === "restaurant_grid_listing") setAllRestaurant(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+  });
+
+  json?.data?.cards?.map((item)=> {
+    if(item?.card?.card?.id === "restaurant_grid_listing") setFilteredData(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+});
+    // setAllRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    // setFilteredData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 
 const onlineStatus = useActivityStatus();
@@ -32,8 +39,8 @@ if (onlineStatus === false) return(
   <h1>you are offlene!! Pleace check your internet connection;</h1>
 )
 
-// (allRestaurant?.length === 0) ? (<ShimmerUi />) :
-  return  (
+
+  return (allRestaurant?.length === 0) ? (<ShimmerUi />) : (
     <>
     <div className="">
       <div className=" md:pt-4 md:px-2 justify-center md:pl-2 flex mt-2 gap-2">

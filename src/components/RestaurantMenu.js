@@ -1,5 +1,5 @@
 import { IMG_CDN_URL } from "../utils/constants";
-// import ShimmerUi from "./ShimmerUi";
+import ShimmerUi from "./ShimmerUi";
 import { useParams } from "react-router-dom";
 import { useRestaurantMenu } from "../utils/useRestaurantMenu";
 import { FaStar } from "react-icons/fa";
@@ -8,7 +8,7 @@ import RestaurantCategory from "./RestaurantCategory";
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const restaurantInfo = useRestaurantMenu(resId);
-  // if (restaurantInfo === null) return <ShimmerUi />;
+  if (restaurantInfo === null) return <ShimmerUi />;
   const {
     name,
     cuisines,
