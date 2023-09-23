@@ -32,7 +32,8 @@ if (onlineStatus === false) return(
   <h1>you are offlene!! Pleace check your internet connection;</h1>
 )
 
-  return (allRestaurant?.length === 0) ? (<ShimmerUi />) : (
+// (allRestaurant?.length === 0) ? (<ShimmerUi />) :
+  return  (
     <>
     <div className="">
       <div className=" md:pt-4 md:px-2 justify-center md:pl-2 flex mt-2 gap-2">
