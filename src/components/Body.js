@@ -5,6 +5,8 @@ import RestaurantCard from "./RestaurantCard";
 import { Link } from "react-router-dom";
 import { useActivityStatus } from "../utils/useActivityStatus";
 
+
+
 const filterData = (searchText, allRestaurant) => {
   const filterData = allRestaurant.filter((restaurant) =>
     restaurant?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase())
@@ -21,19 +23,24 @@ const Body = () => {
   }, []);
 
   const getRestaurent = async () => {
+    console.log(swiggy_api_URL,"this is fetching url")
     const data = await fetch(swiggy_api_URL);
     const json = await data.json();
-    json?.data?.cards?.map((item)=> {
-      if(item?.card?.card?.id === "restaurant_grid_listing") setAllRestaurant(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-  });
+    console.log(json);
 
-  json?.data?.cards?.map((item)=> {
-    if(item?.card?.card?.id === "restaurant_grid_listing") setFilteredData(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-});
-    // setAllRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    // setFilteredData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+//     json?.data?.cards?.map((item)=> {
+//       if(item?.card?.card?.id === "restaurant_grid_listing") setAllRestaurant(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+//   });
+
+//   json?.data?.cards?.map((item)=> {
+//     if(item?.card?.card?.id === "restaurant_grid_listing") setFilteredData(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+// });
+
+// console.log(allRestaurant);
+setAllRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+setFilteredData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
-
+console.log(allRestaurant);
 const onlineStatus = useActivityStatus();
 if (onlineStatus === false) return(
   <h1>you are offlene!! Pleace check your internet connection;</h1>

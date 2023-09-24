@@ -33,7 +33,7 @@ const Cart = () => {
               cartItems.map((item) => {
                 return (
                   <div
-                    className="flex mb-5 items-center gap-2 md:gap-3"
+                    className="flex my-5 m-2 items-center gap-2 md:gap-3"
                     key={item?.item?.card?.ifno?.id}
                   >
                     <div className="w-[18%] ">
@@ -99,7 +99,7 @@ const Cart = () => {
               })}
           </div>
 
-          <div className="basis-4/12 h-fit sticky top-28 p-6 rounded-md border shadow-2xl my-8 md:m-0">
+          <div className="basis-4/12 h-fit sticky top-28 p-6 rounded-md border shadow-2xl my-8 md:m-0 mx-2">
             <h2 className="text-xl border-b pb-4">Bill Details</h2>
 
             {/* order details */}

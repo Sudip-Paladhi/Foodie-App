@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div className="flex bg-white justify-between sticky top-0 z-50 md:h-20 h-14 shadow-lg md:px-16">
       <div className="">
-        <img className="md:w-28 w-32 " src={logo} alt="Logo" />
+        <img className="md:w-28 w-16 " src={logo} alt="Logo" />
       </div>
 
       <div className="">
