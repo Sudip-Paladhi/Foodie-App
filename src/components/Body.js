@@ -28,17 +28,17 @@ const Body = () => {
     const json = await data.json();
     console.log(json);
 
-//     json?.data?.cards?.map((item)=> {
-//       if(item?.card?.card?.id === "restaurant_grid_listing") setAllRestaurant(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-//   });
+    json?.data?.cards?.map((item)=> {
+      if(item?.card?.card?.id === "restaurant_grid_listing") setAllRestaurant(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+  });
 
-//   json?.data?.cards?.map((item)=> {
-//     if(item?.card?.card?.id === "restaurant_grid_listing") setFilteredData(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-// });
+  json?.data?.cards?.map((item)=> {
+    if(item?.card?.card?.id === "restaurant_grid_listing") setFilteredData(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+});
 
-// console.log(allRestaurant);
-setAllRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-setFilteredData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+console.log(allRestaurant);
+// setAllRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+// setFilteredData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 console.log(allRestaurant);
 const onlineStatus = useActivityStatus();
