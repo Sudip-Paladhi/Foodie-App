@@ -42,7 +42,6 @@ console.log(allRestaurant);
 // setAllRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 // setFilteredData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
-console.log(allRestaurant);
 const onlineStatus = useActivityStatus();
 if (onlineStatus === false) return(
   <h1>you are offlene!! Pleace check your internet connection;</h1>
