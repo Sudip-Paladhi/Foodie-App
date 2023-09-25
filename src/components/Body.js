@@ -29,11 +29,13 @@ const Body = () => {
     console.log(json);
 
     json?.data?.cards?.map((item)=> {
-      if(item?.card?.card?.id === "restaurant_grid_listing") setAllRestaurant(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      if(item?.card?.card?.id === "restaurant_grid_listing") 
+      setAllRestaurant(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   });
 
   json?.data?.cards?.map((item)=> {
-    if(item?.card?.card?.id === "restaurant_grid_listing") setFilteredData(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    if(item?.card?.card?.id === "restaurant_grid_listing") 
+    setFilteredData(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 });
 
 console.log(allRestaurant);
