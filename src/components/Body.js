@@ -28,15 +28,32 @@ const Body = () => {
     const json = await data.json();
     console.log(json);
 
-    json?.data?.cards?.map((item)=> {
-      if(item?.card?.card?.id === "restaurant_grid_listing") 
-      setAllRestaurant(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-  });
+//     json?.data?.cards?.map((item)=> {
+//       if(item?.card?.card?.id === "restaurant_grid_listing") 
+//       setAllRestaurant(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+//   });
 
-  json?.data?.cards?.map((item)=> {
-    if(item?.card?.card?.id === "restaurant_grid_listing") 
-    setFilteredData(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-});
+//   json?.data?.cards?.map((item)=> {
+//     if(item?.card?.card?.id === "restaurant_grid_listing") 
+//     setFilteredData(item?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+// });
+
+// Function to detect if the device is a mobile device
+function isMobileDevice() {
+  return window.innerWidth <= 768; // You can adjust the breakpoint as needed
+}
+
+const cardsArray = isMobileDevice() ? json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+                                    : json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+if (cardsArray) {
+  setAllRestaurant(cardsArray);
+  setFilteredData(cardsArray);
+} else {
+  console.log("Data not available for the current device.");
+}
+
+
 
 console.log(allRestaurant);
 // setAllRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);

@@ -10,7 +10,8 @@ export const useRestaurantMenu = (resId) => {
     const data = await fetch(swiggy_menu_api_URL + resId);
     const json = await data.json();
     setRestaurantInfo(json.data);
+    
   };
-
+console.log(restaurantInfo);
   return restaurantInfo;
 };
