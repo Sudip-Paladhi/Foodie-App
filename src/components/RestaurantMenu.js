@@ -18,6 +18,7 @@ const RestaurantMenu = () => {
     totalRatingsString,
     avgRatingString,
   } = restaurantInfo?.cards[0]?.card?.card?.info;
+
   // const categories =
   //   restaurantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
   //     (x) =>
@@ -25,27 +26,21 @@ const RestaurantMenu = () => {
   //       "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
   //   );
 
-  function isMobile () {
-return  window.innerWidth <= 768;
+  function isMobile() {
+    return window.innerWidth <= 768;
   }
 
-const categories = isMobile() ? restaurantInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
-      (x) =>
-        x.card?.["card"]?.["@type"] ===
-        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-    ) : restaurantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
-      (x) =>
-        x.card?.["card"]?.["@type"] ===
-        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-    ); 
-
-// const categories =
-//   restaurantInfo?.cards[cardsIndex]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
-//     (x) =>
-//       x.card?.["card"]?.["@type"] ===
-//       "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-//   );
-
+  const categories = isMobile()
+    ? restaurantInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+        (x) =>
+          x.card?.["card"]?.["@type"] ===
+          "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+      )
+    : restaurantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+        (x) =>
+          x.card?.["card"]?.["@type"] ===
+          "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+      );
 
   return (
     <>
