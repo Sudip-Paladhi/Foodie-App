@@ -9,7 +9,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   const restaurantInfo = useRestaurantMenu(resId);
   if (restaurantInfo === null) return <ShimmerUi />;
-  console.log(restaurantInfo);
+  
   const {
     name,
     cuisines,

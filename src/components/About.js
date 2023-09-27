@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 const About = () => {
   return (
+    <>
+    <div> 
+    
+    </div>
     <div className="md:mt-5 md:w-9/12 m-auto font-Quicksand p-2 gap-1">
       <p className="text-center text-2xl font-extrabold text-gray-600">
         Welcome to Tasty Bites food app
@@ -88,6 +92,7 @@ const About = () => {
         Thank you for being a part of our journey!
       </p>
     </div>
+    </>
   );
 };
 

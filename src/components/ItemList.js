@@ -14,7 +14,7 @@ const ItemList = ({ items }) => {
       {items.map((item) => (
         <div
           key={item?.card?.info?.id}
-          className="flex pt-3 md:p-3 border-b-2 md:h-auto h-28 "
+          className="flex pt-3 md:p-3 border-b-2 md:h-auto h-28"
         >
           <div className="w-8/12 pt-1 md:w-9/12 flex flex-col pl-1">
             <span className="md:font-bold font-semibold leading-5 md:pb-1 md:pt-4">
