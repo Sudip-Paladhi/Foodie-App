@@ -37,7 +37,7 @@ const Contact = () => {
       <h5 className="text-2xl font-bold text-slate-400 mx-auto w-fit">
         Reach out
       </h5>
-      <div className="text-center font-bold text-lg text-orange-500">
+      <div className="text-center font-bold text-lg text-orange-500 font-Quicksand">
         <a href="https://www.linkedin.com/in/sudip-paladhi-064a47128/">
           SUDIP PALADHI
         </a>

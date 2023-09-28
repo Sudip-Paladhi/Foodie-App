@@ -14,7 +14,7 @@ const ItemList = ({ items }) => {
       {items.map((item) => (
         <div
           key={item?.card?.info?.id}
-          className="flex pt-3 md:p-3 border-b-2 md:h-auto h-28"
+          className="flex pt-3 md:p-3 border-b-2 md:h-auto h-32"
         >
           <div className="w-8/12 pt-1 md:w-9/12 flex flex-col pl-1">
             <span className="md:font-bold font-semibold leading-5 md:pb-1 md:pt-4">
@@ -39,7 +39,7 @@ const ItemList = ({ items }) => {
                 alt="Image"
               />
               <button
-                className="absolute bottom-[-8px] justify-center translate-x-4 md:p-2 md:m-2 bg-slate-900 text-white rounded shadow-lg md:translate-x-8 md:translate-y-4"
+                className="absolute bottom-[-8px] justify-center translate-x-4 md:p-2 md:m-2 bg-slate-900 text-white rounded shadow-lg md:translate-x-6 md:translate-y-4"
                 onClick={() => handleAddIteam(item)}
               >
                 Add +

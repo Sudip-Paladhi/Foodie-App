@@ -1,20 +1,50 @@
 import { Link } from "react-router-dom";
+import developer from "../Assets/sudip.png"
 const About = () => {
   return (
     <>
-    <div> 
-    
+    <div className="text-gray-600"> 
+    <div className="w-full px-4 pt-6 text-gray-600">
+      <div className="flex flex-col items-center pt-8">
+        <div className="text-center text-2xl font-bold ">
+        Good day! My name is Sudip Paladhi.
+        </div>
+      </div>
+      <div className="mx-auto flex w-full max-w-[1000px] flex-col items-center gap-4 pt-8 md:flex-row ">
+        <div className="">
+          <img
+            src={developer}
+            className="rounded-full md:lg:h-96"
+          ></img>
+        </div>
+        <div className="lg:py-8">
+          <div className="border-b-2 border-b-gray-200 pb-5 md:text-2xl font-semibold">
+          I'm passionate about technology and thoroughly enjoy creating websites 👻.
+          </div>
+          <div>
+            <div className="mx-0 my-4 md:text-2xl font-semibold">
+            I'd like to share a bit more about myself
+            </div>
+            <div className=" border-b-2 pb-5 border-b-gray-300">
+              <ul className="list-none md:text-xl">
+                <li>🌟 I have a keen interest in web design and development.</li>
+                <li>📚 Currently, I'm actively learning React.js.</li>
+                <li>⚡ I'm open to collaborating on web development projects.</li>
+                <li>🌱 I'm eager to explore Backend development further.</li>
+                <li>📫 You can contact me at sudippaladhi@gmail.com.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+   
     <div className="md:mt-5 md:w-9/12 m-auto font-Quicksand p-2 gap-1">
       <p className="text-center text-2xl font-extrabold text-gray-600">
         Welcome to Tasty Bites food app
       </p>
-      <p className="md:mt-4 mt-2 md:font-semibold">
-        I am a passionate frontend developer. i love creating seamless and
-        delightful user experiences. My goal is to revolutionize the food
-        delivery experience, making it faster, easier, and more enjoyable for
-        you.
-      </p>
+
       <p className="md:mt-4 mt-2 text-xl md:font-semibold text-orange-500 underline">
         Technologies We Use -
       </p>
@@ -91,6 +121,7 @@ const About = () => {
       <p className="md:mt-4 md:font-semibold text-center mt-4">
         Thank you for being a part of our journey!
       </p>
+    </div>
     </div>
     </>
   );
