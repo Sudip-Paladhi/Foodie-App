@@ -34,12 +34,12 @@ const ItemList = ({ items }) => {
           <div className="w-[30%] md:w-3/12 py-2 md:pl-16 md:h-36">
             <div className="relative ">
               <img
-                className="rounded h-full w-full object-cover md:w-36 md:h-28"
+                className="rounded h-full w-full object-cover md:w-36 md:h-24"
                 src={ITEM_IMG_CDN_URL + item?.card?.info?.imageId}
                 alt="Image"
               />
               <button
-                className="absolute bottom-[-8px] justify-center translate-x-4 md:p-2 md:m-2 bg-slate-900 text-white rounded shadow-lg md:translate-x-6 md:translate-y-4"
+                className="absolute bottom-[-8px] justify-center translate-x-4 md:p-2 md:m-2 bg-slate-900 text-white rounded shadow-lg md:translate-x-8 md:translate-y-4"
                 onClick={() => handleAddIteam(item)}
               >
                 Add +
