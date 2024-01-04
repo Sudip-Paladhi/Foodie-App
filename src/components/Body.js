@@ -65,7 +65,7 @@ if (onlineStatus === false) return(
       <div className="flex flex-wrap justify-center gap-3 p-2 mt-1 ">
         {filteredData?.map((restaurant) => {
             return (
-              <Link key={...restaurant?.info?.id} 
+              <Link key={restaurant?.info?.id} 
               to={"/restaurants/"+restaurant?.info?.id}> 
               <RestaurantCard {...restaurant?.info} /> 
               </Link>
