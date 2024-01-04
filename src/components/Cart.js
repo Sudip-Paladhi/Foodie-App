@@ -8,7 +8,6 @@ import {
   increaseItemQuantity,
   decreaseItemQuantity,
   clearCart,
-  selectItemsInCart,
   selectTotalPrice,
 } from "../Redux/CartSlice";
 
