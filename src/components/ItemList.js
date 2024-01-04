@@ -1,6 +1,6 @@
 import { ITEM_IMG_CDN_URL } from "../utils/constants";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../Redux/CartSlice";
+import { addToCart } from "../Redux/cartSlice";
 
 const ItemList = ({ items }) => {
   const dispatch = useDispatch();
