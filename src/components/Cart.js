@@ -10,7 +10,7 @@ import {
   clearCart,
   selectItemsInCart,
   selectTotalPrice,
-} from "../Redux/cartSlice";
+} from "../Redux/CartSlice";
 
 const Cart = () => {
   const dispatch = useDispatch();
