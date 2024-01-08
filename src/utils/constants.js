@@ -15,7 +15,7 @@ export const swiggy_api_URL =
 
 // Swiggy API to get Restaurant Menu data with corsproxy
 export const swiggy_menu_api_URL =
-  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=";
+'https://corsproxy.org/?' + encodeURIComponent("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=");
 
 // menu items api card type key
 export const MENU_ITEM_TYPE_KEY =
