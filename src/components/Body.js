@@ -32,8 +32,8 @@ function isMobileDevice() {
   return window.innerWidth <= 768; // You can adjust the breakpoint as needed
 }
 
-const cardsArray = isMobileDevice() ? json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-                                    : json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+const cardsArray = isMobileDevice() ? json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+                                    : json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
 if (cardsArray) {
   setAllRestaurant(cardsArray);
