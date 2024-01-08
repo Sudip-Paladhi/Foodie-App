@@ -19,6 +19,7 @@ const RestaurantMenu = () => {
     avgRatingString,
   } = restaurantInfo?.cards[0]?.card?.card?.info;
 
+  console.log(restaurantInfo);
   // const categories =
   //   restaurantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
   //     (x) =>
@@ -31,7 +32,7 @@ const RestaurantMenu = () => {
   }
 
   const categories = isMobile()
-    ? restaurantInfo?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+    ? restaurantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
         (x) =>
           x.card?.["card"]?.["@type"] ===
           "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
@@ -42,6 +43,7 @@ const RestaurantMenu = () => {
           "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
       );
 
+      
   return (
     <>
       <div className="p-1 md:py-10 md:m-auto flex justify-between md:w-8/12 border-b">
