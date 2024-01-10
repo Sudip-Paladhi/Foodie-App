@@ -17,7 +17,7 @@ const RestaurantMenu = () => {
     costForTwoMessage,
     totalRatingsString,
     avgRatingString,
-  } = restaurantInfo?.cards[0]?.card?.card?.info || {};
+  } = restaurantInfo?.cards[0]?.card?.card?.info;
 
   
 
@@ -33,16 +33,16 @@ const RestaurantMenu = () => {
   }
 
   const categories = isMobile()
-    ? restaurantInfo?.cards[0]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+    ? restaurantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
         (x) =>
           x.card?.["card"]?.["@type"] ===
           "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-      ) ||{}
+      )
     : restaurantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
         (x) =>
           x.card?.["card"]?.["@type"] ===
           "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-      ) || {};
+      );
 
       
   return (
